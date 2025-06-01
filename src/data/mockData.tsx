@@ -7,7 +7,7 @@
     { data: { source: "newton", target: "einstein", label: "influenced" } },
   ]; */
 
-import type { ElementsDefinition } from "cytoscape";
+/* import type { ElementsDefinition } from "cytoscape";
 
 export const mockElements: ElementsDefinition = {
   nodes: [
@@ -17,4 +17,4 @@ export const mockElements: ElementsDefinition = {
   edges: [
     { data: { source: "einstein", target: "relativity", label: "discovered" } },
   ],
-};
+}; */
