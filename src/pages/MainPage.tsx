@@ -4,6 +4,7 @@ import SearchInput from "../components/SearchInput";
 import ScienceDiscovery from "../components/ScienceDiscovery"; */
 import type { CSSProperties } from "react";
 import GraphView from "../components/GraphView";
+import { mockData } from "../data/mockData";
 
 const style: CSSProperties = {
   width: "100%",
@@ -11,66 +12,9 @@ const style: CSSProperties = {
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  justifyContent: "center",
-};
+  justifyContent: "space-around",
+  
 
-const testElements = {
-  nodes: [
-    {
-      data: {
-        id: "einstein",
-        label: "Albert Einstein",
-        discipline: "physics",
-        variety: "scientist",
-      },
-    },
-    {
-      data: {
-        id: "relativity",
-        label: "Relativity",
-        discipline: "physics",
-        variety: "discovery",
-      },
-    },
-    {
-      data: {
-        id: "newton",
-        label: "Isaac Newton",
-        discipline: "physics",
-        variety: "scientist",
-      },
-    },
-    {
-      data: {
-        id: "gravity",
-        label: "Gravity",
-        discipline: "physics",
-        variety: "discovery",
-      },
-    },
-    {
-      data: {
-        id: "radioactivity",
-        label: "Radioactivity",
-        discipline: "chemistry",
-        variety: "discovery",
-      },
-    },
-    {
-      data: {
-        id: "marie curie",
-        label: "Marie Curie",
-        discipline: "chemistry",
-        variety: "scientist",
-      },
-    },
-  ],
-  edges: [
-    { data: { source: "einstein", target: "relativity" } },
-    { data: { source: "newton", target: "gravity" } },
-    { data: { source: "newton", target: "einstein" } },
-    { data: { source: "marie curie", target: "radioactivity" } },
-  ],
 };
 
 const MainPage: React.FC = () => {
@@ -83,14 +27,12 @@ const MainPage: React.FC = () => {
         </p>
       </header>
       <main
-        style={{
-          width: "100%",
-        }}
+        style={style}
       >
         <SearchInput />
         {/*         <Scientist />
         <ScienceDiscovery /> */}
-        <GraphView elements={testElements} />
+        <GraphView elements={mockData} />
       </main>
     </div>
   );
